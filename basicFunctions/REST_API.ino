@@ -37,6 +37,9 @@ void setupRest(){
   //////   VENTILATION FUNCTIONS
   rest.function("startVent", startVent);
   rest.function("stopVent", stopVent);
+  ///////// EMERGENCY FUNCTIONS ///////
+  rest.function("Emergency_Stop_ON", Emergency_Stop_ON);
+  rest.function("Emergency_Stop_OFF", Emergency_Stop_OFF);
   
   //////    TEST FUNCTIONS   ///////
   rest.function("relayon",relayon);
