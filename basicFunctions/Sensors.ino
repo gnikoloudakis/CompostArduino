@@ -135,7 +135,6 @@ void readEE08T22(){
   }
 }
 
-
 void readSensors(){
   readSHT10();
   readDS18B20();

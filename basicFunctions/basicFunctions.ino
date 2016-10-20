@@ -73,17 +73,28 @@ void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
 //  timeSetup();//////////////////////////////////        set the System Time  ///////////////////////
-//  netSetup();
+  netSetup();
   setupRest();
 //  setupTasks();
   
 }
-
+void testloop(){
+sunlight_in = random(0,100);
+sunlight_out = random(0,100);
+soil_temp = random(20,90);
+soil_hum = random(50,100);
+air_temp_in = random(20,90);
+air_hum_in = random(50,100);
+air_temp_out = random(20,90);
+air_hum_out = random(50,100);
+}
 void loop() {
   // put your main code here, to run repeatedly:
 //  Alarm.delay(100); // wait one second between clock display
-  restLoop();
 //  readSensors();
+  testloop();
+  restLoop();
+  
   
 }
 
