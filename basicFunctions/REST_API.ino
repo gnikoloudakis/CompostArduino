@@ -55,9 +55,9 @@ void setupRest(){
 }
 
 void restLoop(){
-//    EthernetClient client = ethernetServer.available();
-//    rest.handle(client);
-    rest.handle(Serial);
+    EthernetClient client = ethernetServer.available();
+    rest.handle(client);
+//    rest.handle(Serial);
     wdt_reset();
     
 }

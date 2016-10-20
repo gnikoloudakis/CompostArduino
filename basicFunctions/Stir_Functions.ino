@@ -24,26 +24,26 @@ void stirBackwardOff(){
   delay(1000);
 }
 void stirRightOn(){
+  relay.on(5);
+  delay(500);
+  relay.off(5);
+  delay(1000);
+}
+void stirRightOff(){
+  relay.on(6);
+  delay(500);
+  relay.off(6);
+  delay(1000);
+}
+void stirLeftOn(){
   relay.on(7);
   delay(500);
   relay.off(7);
   delay(1000);
 }
-void stirRightOff(){
-  relay2.on(8);
-  delay(500);
-  relay2.off(8);
-  delay(1000);
-}
-void stirLeftOn(){
-  relay2.on(1);
-  delay(500);
-  relay2.off(1);
-  delay(1000);
-}
 void stirLeftOff(){
-  relay2.on(2);
+  relay.on(8);
   delay(500);
-  relay2.off(2);
+  relay.off(8);
   delay(1000);
 }

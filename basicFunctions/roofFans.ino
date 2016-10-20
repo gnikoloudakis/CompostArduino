@@ -1,13 +1,13 @@
 void startFan(){
-  relay.on(5);
+  relay2.on(3);
   delay(500);
-  relay.off(5);
+  relay2.off(3);
   delay(1000);
 }
 void stopFan(){
-  relay.on(6);
+  relay2.on(4);
   delay(500);
-  relay.off(6);
+  relay2.off(4);
   delay(1000);
 }
 

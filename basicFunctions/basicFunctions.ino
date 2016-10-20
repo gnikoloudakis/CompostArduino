@@ -4,7 +4,7 @@
 //#include <DS1307RTC.h>
 #include <Wire.h>
 #include <SPI.h>
-//#include <Ethernet.h>
+#include <Ethernet.h>
 //#include <EthernetUdp.h>
 #include <aREST.h>
 #include <avr/wdt.h>
@@ -60,7 +60,7 @@ int Emergency_Stop = 0;
 //String data ="biotemp,arduino=01,sensor=01 value=0.198";
 
 // Ethernet server
-//EthernetServer ethernetServer(8888);
+EthernetServer ethernetServer(8888);
 
 ///////////////////////// Create aREST instance
 aREST rest = aREST();
