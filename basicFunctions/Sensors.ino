@@ -1,16 +1,21 @@
-///////////////// SETUP EE08T22   E2 INTERFACE SENSOR /////////////////////
-E2_Device EE08T22sensor(20,21); //SDA=20 SCL=21
 
+  ///////////////// SETUP EE08T22   E2 INTERFACE SENSOR /////////////////////
+  E2_Device EE08T22sensor(20,21); //SDA=20 SCL=21
+
+  //OneWire oneWire(ONE_WIRE_BUS);
+  OneWire oneWire(9);
+  DallasTemperature sensors(&oneWire);//ambient temp
 
 //////////////////////////////////////////////////// Digital Temp DS18B20 ///////////////////////////////////////////////////////////////////
-//OneWire oneWire(ONE_WIRE_BUS);
-OneWire oneWire(9);
-DallasTemperature sensors(&oneWire);//ambient temp
-//double ambient_temp;
-void setupDS18B20(){
-  sensors.begin();///start ambient temp
-}
+
+  
+
+/////////////////    setup SHT10   Air Temperature / Air Humidity
+SHT1x sht1x(7, 8);//soil
+
+
 void readDS18B20(){
+  sensors.begin();///start ambient temp
     // call sensors.requestTemperatures() to issue a global temperature 
   // request to all devices on the bus
 //  Serial.print(F("Requesting temperatures..."));
@@ -64,7 +69,6 @@ soil_hum = map(VWC, 0, 37.8, 0, 100);   ///  returns percentage of moisture
 //double temp_f;
 //double humidity;  
 //SHT1x sht1x(dataPin, clockPin);//soil
-SHT1x sht1x(7, 8);//soil
   
 void readSHT10(){
     // Read values from the sensor

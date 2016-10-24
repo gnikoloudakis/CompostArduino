@@ -13,6 +13,15 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
+#define motor_f_pin 53 
+#define motor_b_pin 52
+#define motor_r_pin 51
+#define motor_l_pin 50
+#define fan_pin 49
+#define vent_pin 48
+#define door_pin 47
+#define stop_pin 46
+
 // Declare what pins our relays are connected to.
 // relay8 supports from 1 to 8 relays.
 relay8 relay(22,23,24,25,26,27,28,29);
@@ -68,8 +77,15 @@ aREST rest = aREST();
 /////////////////////////////////////////////////////////// END OF GLOBAL VARIABLES ///////////////////////////
 
 void setup() {
-  pinMode(21, INPUT);
-  pinMode(3, INPUT);
+  pinMode(motor_f_pin, INPUT);
+  pinMode(motor_b_pin, INPUT);
+  pinMode(motor_r_pin, INPUT);
+  pinMode(motor_l_pin, INPUT);
+  pinMode(fan_pin, INPUT);
+  pinMode(vent_pin, INPUT);
+  pinMode(door_pin, INPUT);
+  pinMode(stop_pin, INPUT);
+  
   // put your setup code here, to run once:
   Serial.begin(115200);
 //  timeSetup();//////////////////////////////////        set the System Time  ///////////////////////
@@ -83,15 +99,17 @@ sunlight_in = random(0,100);
 sunlight_out = random(0,100);
 soil_temp = random(20,90);
 soil_hum = random(50,100);
-air_temp_in = random(20,90);
-air_hum_in = random(50,100);
+air_temp_in = random(40,90);
+air_hum_in = random(60,90);
 air_temp_out = random(20,90);
 air_hum_out = random(50,100);
 }
+
 void loop() {
   // put your main code here, to run repeatedly:
 //  Alarm.delay(100); // wait one second between clock display
 //  readSensors();
+//  emergencyloop();
   testloop();
   restLoop();
   
