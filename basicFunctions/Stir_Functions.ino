@@ -10,6 +10,7 @@ void stirForwardOn(){
 //    Motor_F = 0;
 //  }
 Motor_F = 1;
+Serial.println(Motor_F);
 }
 void stirForwardOff(){
   relay.on(2);
@@ -23,6 +24,7 @@ void stirForwardOff(){
 //    Motor_F = 1;
 //  }
 Motor_F = 0;
+Serial.println(Motor_F);
 }
 
 void stirBackwardOn(){
@@ -37,6 +39,8 @@ void stirBackwardOn(){
 //    Motor_B = 0;
 //  }
 Motor_B = 1;
+Serial.println(Motor_B);
+
 }
 void stirBackwardOff(){
   relay.on(4);
@@ -50,6 +54,8 @@ void stirBackwardOff(){
 //    Motor_B = 1;
 //  }
 Motor_B = 0;
+Serial.println(Motor_B);
+
 }
 void stirRightOn(){
   relay.on(5);
@@ -63,6 +69,8 @@ void stirRightOn(){
 //    Motor_R = 0;
 //  }
 Motor_R = 1;
+Serial.println(Motor_R);
+
 }
 void stirRightOff(){
   relay.on(6);
@@ -76,6 +84,8 @@ void stirRightOff(){
 //    Motor_L = 1;
 //  }
 Motor_R = 0;
+Serial.println(Motor_R);
+
 }
 void stirLeftOn(){
   relay.on(7);
@@ -89,6 +99,8 @@ void stirLeftOn(){
 //    Motor_L = 0;
 //  }
 Motor_L = 1;
+Serial.println(Motor_L);
+
 }
 void stirLeftOff(){
   relay.on(8);
@@ -102,4 +114,6 @@ void stirLeftOff(){
 //    Motor_L = 1;
 //  }
 Motor_L = 0;
+Serial.println(Motor_L);
+
 }

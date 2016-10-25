@@ -109,7 +109,7 @@ void loop() {
   // put your main code here, to run repeatedly:
 //  Alarm.delay(100); // wait one second between clock display
 //  readSensors();
-//  emergencyloop();
+//  flagloop();
   testloop();
   restLoop();
   

@@ -1,4 +1,4 @@
-void emergencyloop(){
+void flagloop(){
   if(digitalRead(motor_f_pin)==HIGH){
     Motor_F = 1;
   }
